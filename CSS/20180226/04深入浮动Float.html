@@ -1,0 +1,64 @@
+<!--
+文档流： Body元素下的任意元素，根据其先后顺序，组成了一个个上线关系，这就是文档流
+
+CSS网页布局有两种方式：一是浮动布局；一是定位布局； 这两种方式的核心都是脱离于文档流的控制
+
+以下的例子是文档流；
+
+浮动定位：目的就是打破文档流的显示规则，按我们的布局要求进行显示；
+        利用Float属性，设置为left或者right，可以让对象左浮动或者右浮动。
+        例如：左浮动后，对象的右侧将清出一块区域来，以便让声响的问的那个能够贴在右侧。
+
+        本例将让a进行左侧浮动，但是左浮动并没有出现书本上的效果，也就是b和a显示在一行，b显示在a的右边贴近，
+        而c在第二行
+
+        然后让a进行右浮动，和书本上的效果一致
+
+        现在让a,b,c同时左浮动或者有浮动，会出现联排效果，窗口变小时，c因为没有足够的位置显示到了下一行。
+
+        如果a的高度比较高，那么c显示到下一行后，会和b对齐。
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+            /* * {
+                margin: 0px;
+                padding: 0px;
+            } */
+
+            #a {
+                background-color: red;
+                border: 2px solid black;
+                width: 100px;
+                height: 150px;
+                margin: 2px;
+                float: left;
+            }
+            #b {
+                background-color: yellow;
+                border: 2px solid black;
+                width: 100px;
+                height: 100px;
+                margin: 2px;
+                float: left;
+            }
+            #c {
+                background-color: green;
+                border: 2px solid black;
+                width: 100px;
+                height: 100px;
+                margin: 2px;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="a">a</div>
+        <div id="b">b</div>
+        <div id="c">c</div>
+    </body>
+</html>

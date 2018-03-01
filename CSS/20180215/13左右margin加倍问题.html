@@ -1,0 +1,45 @@
+<!--
+在IE6中会出现左右边距加倍的问题，可以通过display:inline 来解决；
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #a {
+                background-color: red;
+                border: 5px solid black;
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                float: left;
+                /* display: inline; */
+            }
+            #b {
+                background-color: yellow;
+                border: 5px solid black;
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                float: left;
+                clear: left;
+                /* display: inline; */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="a">
+            a
+        </div>
+        <div id="b">
+            b
+        </div>
+    </body>
+</html>

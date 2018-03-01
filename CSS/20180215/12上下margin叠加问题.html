@@ -1,0 +1,50 @@
+<!--
+当两个对象位上下关系时，且都具备margin（外边距）属性的时，此时会出现外边距叠加的现象。
+范例中，Diva和Divb之间的边距并不是20px，而是10px，这就是边距叠加导致的。
+空白边距叠加时，对象间的间距以较大的margin值为准。
+
+只要其中的一个元素设定了float属性，则不会出现外边距叠加的现象。
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #a {
+                background-color: red;
+                border: 5px solid black;
+                width:100px;
+                height:100px;
+                margin-bottom: 10px;
+                /* 如果追加了float属性，则不会出现外边距叠加现象 */
+                /* float: left; */
+            }
+
+            #b {
+                background-color: yellow;
+                border: 5px solid black;
+                width: 100px;
+                height: 100px;
+                margin-top: 10px;
+                /* 如果追加了float属性，则不会出现外边距叠加现象 */
+                /* float: left; */
+                /* clear: left; */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="a">
+            a
+        </div>
+        <div id="b">
+            b
+        </div>
+    </body>
+</html>
