@@ -1,0 +1,54 @@
+<!--
+相对定位就是浮动定位和绝对定位的扩张方式。相对定位使得被设置元素保持于其原始位置相对，并不破坏其原始位置的信息。
+
+注意，这里的相对是只其父元素的位置
+
+例如，如果c是b的子元素的情况下，那么c是相对于b，向下和向左移动10px
+
+绝对定位和相对定位同时发生的情况下，例如b绝对定位，c相对定位.这个时候，b脱离了浮动，没有了占位，
+c相对于b进行定位，并在b中发生了占位
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #a,#b,#c,#d {
+                background-color: #eee;
+                border: 2px solid #aaa;
+                width: 100px;
+                height: 100px;
+                margin: 2px 2px 2px 0px;
+                float: left;
+            }
+
+            #b {
+                position: absolute;
+                top:80px;
+                left:10px;
+            }
+
+            #c {
+                position: relative;
+                top:10px;
+                left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="a">a</div>
+        <div id="b">
+            <div id="c">c</div>
+        </div>
+
+        <div id="d">d</div>
+    </body>
+</html>

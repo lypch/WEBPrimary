@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #nav {
+                height: 26px;
+                border-bottom: 2px solid black;
+            }
+
+            #nav li{
+                float: left;
+                list-style: none;
+            }
+
+            #nav li a{
+                color: black;
+                text-decoration: none;
+                padding-top: 4px;
+                display: block;
+                width: 50px;
+                height: 22px;
+                text-align: center;
+                background-color: #ececec;
+                margin-right: 2px;
+            }
+
+            #nav li a:hover{
+                background-color: #bbbbbb;
+                color: #ffffff;
+            }
+
+            #nav li a#current {
+                background-color:#2788da;
+                color: #ffffff;
+            }
+
+        </style>
+    </head>
+    <body>
+        <ul id="nav">
+            <li><a href="#" id="current">首页</a></li>
+            <li><a href="#">文章</a></li>
+            <li><a href="#">参考</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">论坛</a></li>
+            <li><a href="#">联系</a></li>
+        </ul>
+    </body>
+</html>

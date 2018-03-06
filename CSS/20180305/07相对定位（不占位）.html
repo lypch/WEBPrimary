@@ -1,0 +1,52 @@
+<!--
+b实现了相对定位，并且没有占用空间，c浮动到了a的边上，之所以会有这样的效果，因为绝对定位是相对于父及对象的位置进行的绝对定位
+所以绝对定位其实也是一种特殊的相对定位。
+
+使用这种方法的时候，必须设置有效的宽高值，否则b不在参照divGroup的左上角，而是参照最后一个元素的右下角，测试后发现没有问题
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #divgroup {
+                margin: 50px 0px 0px 50px;
+                position: relative;
+                border: 1px solid #000;
+                /* width: 400px;
+                height: 200px; */
+            }
+
+            #a,#b,#c,#d{
+                background-color: #eee;
+                border: 2px solid #aaa;
+                width: 100px;
+                height: 100px;
+                margin: 2px 2px 2px 0px;
+                float: left
+            }
+
+            #b {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="divgroup">
+            <div id="a">a</div>
+            <div id="b">b</div>
+            <div id="c">c</div>
+            <div id="d">d</div>
+        </div>
+    </body>
+</html>

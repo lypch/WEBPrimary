@@ -1,0 +1,48 @@
+<!--
+创建4个div，左浮动，上下右的margin＝2px
+
+把＃b#d设定为绝对定位,top为80px，left分别为100px和210px
+
+设为为绝对定位，＃b#d不再浮动，因此＃c会自动补位。
+-->
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #a,#b,#c,#d {
+            background-color: #eee;
+            border: 2px solid #aaa;
+            width: 100px;
+            height: 100px;
+            margin: 2px 2px 2px 0px;
+            float: left;
+        }
+
+        #b {
+            position: absolute;
+            top:80px;
+            left:100px;
+        }
+
+        #d{
+            position: absolute;
+            top: 80px;
+            left: 210px;
+        }
+    </style>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+    <div id="d"></div>
+</body>
+</html>
